@@ -1,0 +1,21 @@
+{
+	"title": "iFrame Yuh liste",
+	"titlesocial": "iFrame Yuh liste",
+	"description": "iFrame Yuh liste",
+	"authors": {
+		"photos": false,
+		"videos": false,
+		"writer": false,
+		"dev": "César Greppin"
+	},
+	"imgSocial": "social.jpg",
+	"headertheme": "trans", 
+	"blickWhite": false,
+	"blickBlack": true,
+	"headerBoxed": false,
+	"pubDate": "2020-07-23T11:00:00+00:00",
+	"partner": {
+		"logo": "img/empty.png",
+		"link": "https://www.blick.ch/"
+	}
+}

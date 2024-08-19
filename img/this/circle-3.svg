@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.739" y1="0.049" x2="0.926" y2="0.576" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ebdef5"/>
+      <stop offset="1" stop-color="#b296c7"/>
+    </linearGradient>
+  </defs>
+  <circle id="Ellipse_16" data-name="Ellipse 16" cx="24" cy="24" r="24" opacity="0.24" fill="url(#linear-gradient)"/>
+</svg>

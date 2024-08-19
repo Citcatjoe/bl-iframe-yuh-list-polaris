@@ -1,0 +1,76 @@
+h1
+{
+    font-family: Playfair Display;
+    //font-family: bebas neue;
+    //font-size: 100px !important;
+    line-height: .8;
+
+    @include breakpoint(min, medium) {
+        //font-size: 200px !important;
+    };
+}
+
+h2 
+{
+    font-family: Playfair Display;
+    font-weight: 300 ;
+}
+.chapeau h2 {font-family: poppins;  }
+
+h3 
+{
+    //font-family: poppins;
+    font-family: Poppins;
+}
+
+h4
+{
+    font-family: Playfair Display;
+}
+
+p
+{
+    font-family: poppins;
+}
+
+blockquote
+{
+    font-family: poppins;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        #ff2727, 
+        #ffffff
+      ) 1 100%;
+      border-right: 0;
+}
+
+.poppins
+{
+    font-family: Poppins
+}
+
+
+.lettrine:first-letter
+{
+    
+    font-size: 570%;
+    font-weight: 600;
+    //border : 1px solid red;
+    float : left;
+    margin-top:5px;
+    line-height: 0.7;
+    margin-right: 10px;
+    
+}
+
+ul 
+{
+    font-family: Poppins;
+}
+
+.share
+{
+    font-family: poppins;
+}

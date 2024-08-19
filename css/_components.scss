@@ -1,0 +1,338 @@
+@font-face {
+    font-family: 'proxima_softlight';
+    src: url('../fonts/proximasoft-light-webfont.woff2') format('woff2'),
+         url('../fonts/proximasoft-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'proxima_softsemibold';
+    src: url('../fonts/proximasoft-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/proximasoft-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_softregular';
+    src: url('../fonts/proximasoft-regular-webfont.woff2') format('woff2'),
+         url('../fonts/proximasoft-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'proxima_softbold';
+    src: url('../fonts/proximasoft-bold-webfont.woff2') format('woff2'),
+         url('../fonts/proximasoft-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+.menu_overlay
+{
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s;
+
+    &.is-visible 
+    {
+        opacity: .5;
+        visibility: visible;
+        transition: all .2s;
+    }
+}
+
+
+h1
+{
+    font-family: 'GoodBlackItalic', 'Arial Narrow', Impact, sans-serif;
+font-style: italic;
+font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    font-style: italic;
+    font-size: 81px !important;
+    line-height: 97px;
+    font-weight: bolder;
+    text-shadow: 5px 5px #B9CEDD !important;
+
+    &::before
+    {
+
+    }
+}
+
+.subtitle
+{
+    font-family: 'GoodCondBold', 'Arial Narrow', Impact, sans-serif;
+font-style: normal;
+font-weight: bold;
+    font-size: 22px;
+    line-height: 28px;
+    color: white;
+    text-shadow: 0px 1px 6px #00000072;
+}
+
+.mobile-hidden
+{
+    display: inline-block;
+
+    @include breakpoint(min, medium) {
+        display: none;
+    }; 
+}
+
+.desktop-hidden
+{
+    display: none;
+
+    @include breakpoint(min, medium) {
+        display: inline-block;
+    }; 
+}
+
+.yuh
+{   
+    //height: auto;
+    //aspect-ratio: 1/1;
+    //background: linear-gradient(90deg, #D2ECF7 0%, rgb(255, 255, 255) 55%, rgb(255, 255, 255) 100%);
+    //border-radius: 0;
+
+    width: 100%;
+    height: 306px;
+    //border: 1px solid rgb(214, 214, 214);
+    background: linear-gradient(66deg, #F7F8FC 0%, #FBF7FC 100%);
+    border-radius: 8px;
+
+    @include breakpoint(min, small) {
+        height: 247px;
+    }
+    
+}
+
+.yuh-list
+{
+    position: absolute;
+    height: 100%;
+    left: 20px;
+    right: 20px;
+    column-count: 1;
+    column-gap: 0;
+    overflow: hidden;
+    padding-bottom: 64px;
+    padding-top: 64px;
+
+    @include breakpoint(min, 576px) {
+        left: 240px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+    //     padding-bottom: 16rem;
+    // padding-top: 16rem
+    }
+
+    @include breakpoint(min, 800px) {
+        column-gap: 9.7%;
+        column-count: 2;
+        display: block;
+    }
+
+    li 
+    {
+
+        
+        height: 25%;
+        display: flex;
+        align-items: center;
+
+        
+        // &:nth-child(n+5)
+        // {
+        //     display: none;
+        // }
+
+        @include breakpoint(max, medium) {
+            //background: red;
+
+            &:nth-child(n+5) {
+                display: none; 
+            }
+        }
+
+       
+    }
+}
+
+.product-icon
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    background: white;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-right: 20px;
+    
+    img 
+    {
+        border-radius: 100px;
+    }
+}
+
+.product-txt
+{   
+    display: block;
+    width: calc((100% - 50px) / 2);
+    font-size: 14px;
+    
+
+    .product-txt-name
+    {
+        font-family: 'proxima_softsemibold' !important;
+        transform: translateY(1px);
+    }
+
+    .product-txt-symbol
+    {
+        font-family: 'proxima_softregular' !important;
+        color: #959595;
+        text-transform: uppercase;
+        font-size: 11px;
+        transform: translateY(-1px);
+    }
+
+    .product-txt-type
+    {
+        font-family: 'proxima_softregular' !important;
+        color: #959595;
+        font-size: 11px;
+        transform: translateY(-1px);
+    }
+    
+}
+
+.product-nbr
+{
+    display: block;
+    width: calc((100% - 50px) / 2);
+    text-align: right;
+    font-size: 14px;
+    transform: translateY(2px);
+
+    &.red { color:#D23831 !important; } &.green { color:#4FAD8D; }
+
+    .product-nbr-currentprice
+    {
+        font-family: 'proxima_softsemibold' !important;
+    }
+
+    .product-nbr-24h
+    {
+        font-family: 'proxima_softlight' !important;
+        text-align: right;
+        transform: translateY(-5px);
+
+        #arrow-up, #arrow-down { transform: translateY(7px); margin-right: 6px;}
+    }
+}
+
+.h-custom-yuh
+{
+    height: 308px;
+}
+
+.logos
+{
+    width: 146px;
+
+    @include breakpoint(min, medium) {
+        top: 15px;
+        left: 15px;
+        
+        height: auto;
+    }; 
+}
+
+.corner
+{
+    left: auto;
+    bottom: auto;
+    top: 0;
+    right: 0;
+    transform: rotate(180deg);
+
+    @include breakpoint(min, 576px) {
+        left: 0;
+        bottom: 0;
+        top: auto;
+        right: auto;
+        transform: rotate(0);
+    }
+}
+
+button
+{
+    width: calc(100% - 40px);
+    top: auto;
+    bottom: 15px;
+
+    height: 34px;
+    background-color: #FA512E !important;
+    font-family: 'proxima_softsemibold' !important;
+    font-size: 15px !important;
+    
+    box-shadow: 0px 6px 10px #f38b7669;
+    padding-bottom:2px !important;
+    color: rgba(255, 255, 255, .95) !important;
+
+    @include breakpoint(min, small) {
+        width: 146px;
+        top: 62px;
+        bottom: auto;
+    }
+}
+
+.parallax
+{
+    aspect-ratio: 16/8;
+
+    
+}
+
+#parallax1 .parallax-bg
+{
+    height: 200%;
+    // position: relative;
+    top: -100%;
+}
+
+#parallax2 .parallax-bg
+{
+    height: 200%;
+    // position: relative;
+    top: -100%;
+}
+
+#parallax3 .parallax-bg
+{
+    height: 200%;
+    // position: relative;
+    top: -100%;
+}
+
+#parallax4 .parallax-bg
+{
+    height: 200%;
+    // position: relative;
+    top: -100%;
+}
+
+#parallax5 .parallax-bg
+{
+    height: 200%;
+    // position: relative;
+    top: -100%;
+}
